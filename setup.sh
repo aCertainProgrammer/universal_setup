@@ -45,7 +45,7 @@ cd
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
-git clone https://github.com/aCertainProgrammer/nvim_config.git --depth 1
+git clone https://github.com/aCertainProgrammer/nvim_config.git ~/.config/nvim
 
 # Go
 if [ -d /usr/local/go ]; then
@@ -62,6 +62,7 @@ curl -LO https://go.dev/dl/$gozip
 sudo tar -C /usr/local -xzf $gozip
 
 rm -rf $TMP
+cd
 
 # Tmux
 sudo apt install tmux -y
@@ -84,7 +85,7 @@ sudo fc-cache -f -v
 rm -rf $TMP
 
 # Bashrc
-cd ~/dev/setup/
+cd ~/dev/universal_setup/
 cat bashrc >> ~/.bashrc
 
 # Terminal
